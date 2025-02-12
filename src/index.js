@@ -10,10 +10,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json({ limit: "20kb" }));
-
-app.get("/", (req, res) => {
-  res.send("this is ajay");
-});
+app.use(express.static("dist"));
 
 // routing declearation....
 app.use("/api/v2", UserRouter);

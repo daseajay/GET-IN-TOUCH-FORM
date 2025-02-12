@@ -2,6 +2,7 @@ import nodemailer from "nodemailer";
 const sendEmail = async (req, res) => {
   // get user data from frontend....
   const { name, email, subject, message } = req.body;
+  console.log("ssssss", name, email, subject, message);
   try {
     const transporter = nodemailer.createTransport({
       service: "gmail",
